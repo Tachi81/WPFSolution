@@ -6,7 +6,122 @@
         xmlns:local="clr-namespace:Lesson1"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
+
+    
     <Grid>
-        
-    </Grid>
+        <!--Region GroupBox-->
+        <!--<GroupBox>
+            <GroupBox.Header>
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="/Images/start.png"/>
+                    <Label FontWeight="Bold">Ile zarabiasz?</Label>
+                </StackPanel>                
+            </GroupBox.Header>
+            <StackPanel Margin="10">
+            <Label FontWeight="Bold">Ile zarabiasz?</Label>
+                <RadioButton>1000zł</RadioButton>
+                <RadioButton>2000zł</RadioButton>
+                <RadioButton>3000zł</RadioButton>
+            </StackPanel>
+        </GroupBox>
+        <GroupBox Header="Ile pracujesz?">
+            <StackPanel Margin="10">
+                <Label FontWeight="Bold">Ile zarabiasz?</Label>
+                <RadioButton>2</RadioButton>
+                <RadioButton>2</RadioButton>
+                <RadioButton>2</RadioButton>
+            </StackPanel>
+        </GroupBox>-->
+        <!--Endregion-->
+
+        <!--Region WrapPanel-->
+        <!--<WrapPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
+            <Button Width="100">1</Button>
+            <Button Width="100">1</Button>
+            <Button Width="100">1</Button>
+            <Button Width="100">1</Button>
+            <Button Width="100">1</Button>
+            <Button Width="100">1</Button>
+            <Button Width="100">1</Button>
+            <Button Width="100">1</Button>
+            <Button Width="100">1</Button>
+        </WrapPanel>-->
+        <!--Endregion-->
+
+        <!--Region Dockpanel-->
+        <!--<DockPanel LastChildFill="True">
+            <Button Content="Top" DockPanel.Dock="Top"/>
+            <Button Content="Bottom" DockPanel.Dock="Bottom"/>
+            -->
+        <!--<Button Content="Left" DockPanel.Dock="Left"/>            
+            <Button Content="Right" DockPanel.Dock="Right"/>
+            <Button DockPanel.Dock="Right" Content="Center"/>-->
+        <!--
+            <Button Content="Center"/>
+        </DockPanel>-->
+        <!--Endregion-->
+
+        <!--Region UniformGrid-->
+        <!--<UniformGrid Rows="2" Columns="2" ClipToBounds="True">
+            <Button>1</Button>
+            <Button>1</Button>
+            <Button>1</Button>
+            <Button>1</Button>
+            <Button>1</Button>
+            <Button>1</Button>
+            <Button>1</Button>
+            <Button>1</Button>
+            <Button>1</Button>
+        </UniformGrid>-->
+        <!--Endregion-->
+        <!--Region Expander-->
+        <!--<Expander Header="Opcje" IsExpanded="True">
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Top">
+                <TextBlock Margin="10" VerticalAlignment="Center">Opcja 1</TextBlock>
+                <Button Padding="5" VerticalAlignment="Center">Zastosuj</Button>
+            </StackPanel>
+        </Expander>-->
+        <!--Endregion-->
+
+        <!--Region ScrollViewer-->
+        <!--<ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Hidden">
+            <TextBlock>
+            aposdopgjfpoasdjgpjsdpofjpsdojfpoasdjpofsdopjfopsdjfopjsdpofjposdjfposdfsdfksdlfjlsdjflksdjlkfjslsdksd
+            </TextBlock>
+        </ScrollViewer>-->
+        <!--Endregion-->
+        <!--Region Definicje Columns and Rows-->
+        <!--<Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100" MinWidth="50"/>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Button Grid.Column="1" Margin="10" Width="100" Padding="2" Content="Klik"/>
+        <Rectangle Grid.Row="1" Fill="Bisque"/>
+        <GridSplitter Grid.Column="1" Width="5" Background="Red" HorizontalAlignment="Left" Grid.RowSpan="2"/>
+        -->
+        <!--Endregion-->
+        <!-- Region Canvas -->
+        <!--<Canvas Grid.Column="2" Grid.Row="2">
+            <Button Content="Button" Canvas.Left="39" Canvas.Top="54" Width="75"/>
+            <Button Content="Button" Canvas.Left="39" Canvas.Top="79" Width="75"/>
+        </Canvas>-->
+        <!-- Endregion -->
+        <!--Region Bubbling-->
+
+        <!--<Button Grid.Column="1" Margin="10" Width="100" Padding="2" Click="Button_Click_1">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="/Images/start.png" Width="16"/>
+                <Label>Start</Label>
+                <Button Content="Test" Click="Button_Click"/>
+            </StackPanel>            
+        </Button>
+        <Button Grid.Column="2" Width="100">Start</Button>-->
+        <!--Endregion-->
+    </Grid> 
+
 </Window>

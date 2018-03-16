@@ -24,5 +24,10 @@ namespace Lesson1
         {
             InitializeComponent();
         }
+
+        private void ButtonBase_OnClick(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("klikles");
+        }
     }
 }
