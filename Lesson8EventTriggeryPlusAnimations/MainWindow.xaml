@@ -37,11 +37,12 @@
                         </BeginStoryboard>
                     </EventTrigger>
                 </TextBlock.Triggers>
+
             </TextBlock>
 
             <Rectangle Name="OurRectangle" Width="100" Height="30" Fill="Crimson" 
                        HorizontalAlignment="Left" Margin="10"></Rectangle>
-
+            
             <StackPanel Orientation="Horizontal" Margin="5">
 
                 <Button Style="{StaticResource AnimationBtnStyle}" Name="BeginBtn" Content="Start" ></Button>
@@ -76,7 +77,7 @@
                     </EventTrigger>
 
                     <EventTrigger RoutedEvent="Button.Click" SourceName="DoubleSpeedBtn">
-                        <ResumeStoryboard BeginStoryboardName="OurAnimation"></ResumeStoryboard>
+                        <SetStoryboardSpeedRatio SpeedRatio="2" BeginStoryboardName="OurAnimation"></SetStoryboardSpeedRatio>
                     </EventTrigger>
 
                 </StackPanel.Triggers>
