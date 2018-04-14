@@ -1,0 +1,56 @@
+﻿<Window x:Class="Lesson8EventTriggeryPlusAnimations.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lesson8EventTriggeryPlusAnimations"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Window.Resources>
+        <Style TargetType="Button" x:Key="AnimationBtnStyle">
+            <Setter Property="Margin" Value="5"></Setter>
+            <Setter Property="Padding" Value="5"></Setter>
+            <Setter Property="Width" Value="100"></Setter>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <StackPanel>
+            <TextBlock Text="Jakis testowy tekst">
+                <TextBlock.Style>
+                    <Style TargetType="TextBlock">
+                        <Setter Property="FontSize" Value="15"></Setter>
+                    </Style>
+                </TextBlock.Style>
+                <TextBlock.Triggers>
+                    <EventTrigger RoutedEvent="MouseEnter">
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Duration="0:0:0.400" Storyboard.TargetProperty="FontSize" To="30"></DoubleAnimation>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                    <EventTrigger RoutedEvent="MouseLeave">
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Duration="0:0:0.400" Storyboard.TargetProperty="FontSize" To="15"></DoubleAnimation>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </TextBlock.Triggers>
+            </TextBlock>
+
+            <Rectangle Name="OurRectangle" Width="100" Height="30" Fill="Crimson" 
+                       HorizontalAlignment="Left" Margin="10"></Rectangle>
+
+            <StackPanel Orientation="Horizontal" Margin="5">
+
+                <Button Style="{StaticResource AnimationBtnStyle}" Name="BeginBtn" Content="Start" ></Button>
+                <Button Style="{StaticResource AnimationBtnStyle}" Name="StopBtn" Content="Stop"></Button>
+                <Button Style="{StaticResource AnimationBtnStyle}" Name="PauseBtn" Content="Pause" ></Button>
+                <Button Style="{StaticResource AnimationBtnStyle}" Name="ResumeBtn" Content="Resume" ></Button>
+                <Button Style="{StaticResource AnimationBtnStyle}" Name="DoubleSpeedBtn" Content="Double Speed"></Button>
+
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
