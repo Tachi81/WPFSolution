@@ -52,7 +52,7 @@
                 
                 <StackPanel.Triggers>
                     <EventTrigger RoutedEvent="Button.Click" SourceName="BeginBtn">
-                        <BeginStoryboard>
+                        <BeginStoryboard Name="OurAnimation">
                             <Storyboard>
                                 <DoubleAnimation Storyboard.TargetName="OurRectangle" 
                                                  Storyboard.TargetProperty="Width" Duration="0:0:5" From="100"
@@ -61,6 +61,22 @@
                                 </DoubleAnimation>
                             </Storyboard>
                         </BeginStoryboard>
+                    </EventTrigger>
+
+                    <EventTrigger RoutedEvent="Button.Click" SourceName="StopBtn">
+                        <StopStoryboard BeginStoryboardName="OurAnimation"></StopStoryboard>
+                    </EventTrigger>
+
+                    <EventTrigger RoutedEvent="Button.Click" SourceName="PauseBtn">
+                        <PauseStoryboard BeginStoryboardName="OurAnimation"></PauseStoryboard>
+                    </EventTrigger>
+
+                    <EventTrigger RoutedEvent="Button.Click" SourceName="ResumeBtn">
+                        <ResumeStoryboard BeginStoryboardName="OurAnimation"></ResumeStoryboard>
+                    </EventTrigger>
+
+                    <EventTrigger RoutedEvent="Button.Click" SourceName="DoubleSpeedBtn">
+                        <ResumeStoryboard BeginStoryboardName="OurAnimation"></ResumeStoryboard>
                     </EventTrigger>
 
                 </StackPanel.Triggers>
