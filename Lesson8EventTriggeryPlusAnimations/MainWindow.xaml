@@ -22,7 +22,7 @@
                     </Style>
                 </TextBlock.Style>
                 <TextBlock.Triggers>
-                    <EventTrigger RoutedEvent="MouseEnter">
+                    <EventTrigger RoutedEvent="TextBlock.MouseEnter">
                         <BeginStoryboard>
                             <Storyboard>
                                 <DoubleAnimation Duration="0:0:0.400" Storyboard.TargetProperty="FontSize" To="30"></DoubleAnimation>
@@ -49,7 +49,21 @@
                 <Button Style="{StaticResource AnimationBtnStyle}" Name="PauseBtn" Content="Pause" ></Button>
                 <Button Style="{StaticResource AnimationBtnStyle}" Name="ResumeBtn" Content="Resume" ></Button>
                 <Button Style="{StaticResource AnimationBtnStyle}" Name="DoubleSpeedBtn" Content="Double Speed"></Button>
+                
+                <StackPanel.Triggers>
+                    <EventTrigger RoutedEvent="Button.Click" SourceName="BeginBtn">
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Storyboard.TargetName="OurRectangle" 
+                                                 Storyboard.TargetProperty="Width" Duration="0:0:5" From="100"
+                                                 To="500">
 
+                                </DoubleAnimation>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+
+                </StackPanel.Triggers>
             </StackPanel>
         </StackPanel>
     </Grid>
