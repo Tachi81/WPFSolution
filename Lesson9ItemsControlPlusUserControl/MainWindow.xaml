@@ -8,8 +8,9 @@
         Title="MainWindow" Height="450" Width="800">
     <StackPanel>
 
-        <local:ImagesWithTitles Background="AliceBlue"></local:ImagesWithTitles >
-        <local:ImagesWithTitles Background="AntiqueWhite"></local:ImagesWithTitles>
+        <local:ImagesWithTitles x:Name="Family" Background="AliceBlue" Szerokosc="300"></local:ImagesWithTitles >
+        <local:ImagesWithTitles x:Name="Holidays" Background="AntiqueWhite" Width="150"></local:ImagesWithTitles>
+        <local:ImagesWithTitles  Background="AntiqueWhite" Width="150"></local:ImagesWithTitles>
 
     </StackPanel>
 </Window>

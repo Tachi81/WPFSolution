@@ -1,17 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace Lesson9ItemsControlPlusUserControl
 {
@@ -23,7 +11,15 @@ namespace Lesson9ItemsControlPlusUserControl
         public MainWindow()
         {
             InitializeComponent();
-            List<CustomImage>  customimages = new List<CustomImage>
+
+
+            List<CustomImage> customimages = new List<CustomImage>
+            {
+                new CustomImage("logo.jpg","logo"),
+
+            };
+
+            List<CustomImage> holidayImgs = new List<CustomImage>
             {
                 new CustomImage("logo.jpg","logo"),
                 new CustomImage("logo1.jpg","logo"),
@@ -31,7 +27,18 @@ namespace Lesson9ItemsControlPlusUserControl
                 new CustomImage("logo2.jpg","logo"),
                 new CustomImage("logo.jpg","logo")
             };
+
+            List<CustomImage> familyimgs = new List<CustomImage>
+            {
+                new CustomImage("logo2.jpg","logo"),
+                new CustomImage("logo1.jpg","logo"),
+                new CustomImage("logo.jpg","logo"),
+                new CustomImage("logo2.jpg","logo"),
+                new CustomImage("logo2.jpg","logo")
+            };
             this.DataContext = customimages;
+            Family.DataContext = familyimgs;
+            Holidays.DataContext = holidayImgs;
         }
     }
 }
