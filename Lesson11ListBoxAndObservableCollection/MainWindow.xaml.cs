@@ -1,17 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Collections.ObjectModel;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace Lesson11ListBoxAndObservableCollection
 {
@@ -20,9 +9,38 @@ namespace Lesson11ListBoxAndObservableCollection
     /// </summary>
     public partial class MainWindow : Window
     {
+
+        ObservableCollection<string> ListOfNames = new ObservableCollection<string>()
+        {
+            "Kayah",
+            "Marek",
+            "Anna"
+        };
+
         public MainWindow()
         {
             InitializeComponent();
+
+            this.DataContext = ListOfNames;
+
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            if (!String.IsNullOrWhiteSpace(NameText.Text))
+            {
+                ListOfNames.Add(NameText.Text);
+            }
+
+        }
+
+        private void RemoveBtnClick(object sender, RoutedEventArgs e)
+        {
+            if (NamesList.SelectedIndex >= 0)
+            {
+                ListOfNames.RemoveAt(NamesList.SelectedIndex);
+            }
+
         }
     }
 }

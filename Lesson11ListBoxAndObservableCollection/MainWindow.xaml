@@ -6,11 +6,17 @@
         xmlns:local="clr-namespace:Lesson11ListBoxAndObservableCollection"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <StackPanel>
-        <ListBox SelectionMode="Extended" x:Name="NamesList">
-            <ListBoxItem>Marek</ListBoxItem>
-            <ListBoxItem>Ania</ListBoxItem>
-            <ListBoxItem>Dawid</ListBoxItem>
+    <StackPanel >
+        <StackPanel Orientation="Horizontal" Margin="10">
+
+            <TextBox x:Name="NameText" Width="100"></TextBox>
+            <Button Click="Button_Click" Content="Dodaj Imie"></Button>
+
+        </StackPanel>
+
+        <ListBox ItemsSource="{Binding}" SelectionMode="Extended" x:Name="NamesList" Margin="10">
+          
         </ListBox>
+        <Button Click="RemoveBtnClick" Content="Usuń" Margin="10"></Button>
     </StackPanel>
 </Window>
