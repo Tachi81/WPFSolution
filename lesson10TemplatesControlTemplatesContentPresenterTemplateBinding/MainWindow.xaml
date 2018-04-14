@@ -6,22 +6,23 @@
         xmlns:local="clr-namespace:lesson10TemplatesControlTemplatesContentPresenterTemplateBinding"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <Button Width="150" Height="150" Foreground="Snow" FontSize="32">
-            <Button.Content>
+    <Window.Resources>
+        <ControlTemplate TargetType="Button" x:Key="BtnControlTemplate">
+            <Grid>
+
+                <Ellipse Width="{TemplateBinding Width}" Height="{TemplateBinding Height}" Fill="Crimson"></Ellipse>
+
                 <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
                     <Ellipse Width="15" Height="15" Fill="Yellow"></Ellipse>
-                    <Label>Test</Label>
+                    <ContentPresenter ></ContentPresenter>
                 </StackPanel>
-            </Button.Content>
-            <Button.Template>
-                <ControlTemplate TargetType="Button">
-                    <Grid>
-                        <Ellipse Width="{TemplateBinding Width}" Height="{TemplateBinding Height}" Fill="Crimson"></Ellipse>
-                        <ContentPresenter ></ContentPresenter>
-                    </Grid>
-                </ControlTemplate>
-            </Button.Template>
+
+            </Grid>
+        </ControlTemplate>
+    </Window.Resources>
+    <Grid>
+        <Button Width="150" Height="150" Content="Test" Foreground="Snow" FontSize="32" Template="{StaticResource BtnControlTemplate}">
+
         </Button>
     </Grid>
 </Window>
