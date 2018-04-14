@@ -8,10 +8,24 @@ namespace Lesson9ItemsControlPlusUserControl
         public string Description { get; set; }
         public bool IsFound { get; set; }
 
+        public string DefaultNotFoundImgPath
+        {
+            get
+            {
+                return Path.Combine(Directory.GetCurrentDirectory(), "Images", "no-image.png");
+            }
+        }
+
+        public string DefaultNotFoundDescription => "Image not found"; // to samo co powyżej
+
+
+
+
         public CustomImage()
         {
-            ImagePath = Path.Combine(Directory.GetCurrentDirectory(), "Images", ImagePath);
-            Description = "Default";
+            ImagePath = DefaultNotFoundImgPath;
+            Description = DefaultNotFoundDescription;
+
         }
 
         public CustomImage(string imagePath, string description)
