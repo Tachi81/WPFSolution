@@ -16,7 +16,7 @@ namespace Lesson9ItemsControlPlusUserControl
 
         public CustomImage(string imagePath, string description)
         {
-            ImagePath = imagePath;
+            ImagePath = Path.Combine(Directory.GetCurrentDirectory(), "Images", imagePath);
             Description = description;
             IsFound = File.Exists(Path.Combine(Directory.GetCurrentDirectory(), "Images", ImagePath));
         }

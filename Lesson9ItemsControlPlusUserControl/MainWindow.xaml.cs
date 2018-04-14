@@ -23,6 +23,15 @@ namespace Lesson9ItemsControlPlusUserControl
         public MainWindow()
         {
             InitializeComponent();
+            List<CustomImage>  customimages = new List<CustomImage>
+            {
+                new CustomImage("logo.jpg","logo"),
+                new CustomImage("logo1.jpg","logo"),
+                new CustomImage("logo.jpg","logo"),
+                new CustomImage("logo2.jpg","logo"),
+                new CustomImage("logo.jpg","logo")
+            };
+            this.DataContext = customimages;
         }
     }
 }
