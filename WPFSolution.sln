@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lesson10TemplatesControlTem
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson11ListBoxAndObservableCollection", "Lesson11ListBoxAndObservableCollection\Lesson11ListBoxAndObservableCollection.csproj", "{CEFDA96E-F67B-4BE2-927B-7C50C19B60F2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson12MenuAndCommands", "Lesson12MenuAndCommands\Lesson12MenuAndCommands.csproj", "{3AF2AC0A-D909-45C0-974E-80E0D53B5F69}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +77,10 @@ Global
 		{CEFDA96E-F67B-4BE2-927B-7C50C19B60F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CEFDA96E-F67B-4BE2-927B-7C50C19B60F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CEFDA96E-F67B-4BE2-927B-7C50C19B60F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3AF2AC0A-D909-45C0-974E-80E0D53B5F69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3AF2AC0A-D909-45C0-974E-80E0D53B5F69}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3AF2AC0A-D909-45C0-974E-80E0D53B5F69}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3AF2AC0A-D909-45C0-974E-80E0D53B5F69}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
