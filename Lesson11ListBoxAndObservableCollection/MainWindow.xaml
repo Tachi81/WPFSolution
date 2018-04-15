@@ -15,7 +15,26 @@
         </StackPanel>
 
         <ListBox ItemsSource="{Binding}" SelectionMode="Extended" x:Name="NamesList" Margin="10">
-          
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <TextBlock FontSize="25" Text="{Binding Path=Name}"></TextBlock>
+                        <TextBlock FontSize="12" Text="{Binding Path=Position}"></TextBlock>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+
+            <ListBox.ItemContainerStyle>
+                <Style TargetType="ListBoxItem">
+                    <Setter Property="Padding" Value="5"></Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsSelected" Value="True">
+                            <Setter Property="FontSize" Value="25"></Setter>
+                            <Setter Property="FontWeight" Value="Bold"></Setter>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </ListBox.ItemContainerStyle>
         </ListBox>
         <Button Click="RemoveBtnClick" Content="Usuń" Margin="10"></Button>
     </StackPanel>

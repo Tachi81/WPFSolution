@@ -17,11 +17,19 @@ namespace Lesson11ListBoxAndObservableCollection
             "Anna"
         };
 
+        ObservableCollection<Person> ListOfPeople = new ObservableCollection<Person>()
+        {
+           new Person() {Name= "Kayah", Position = "Director"},
+            new Person() {Name= "Konrad", Position = "Manager"},
+            new Person() {Name= "Olga", Position = "Office Manager"}
+
+        };
+
         public MainWindow()
         {
             InitializeComponent();
 
-            this.DataContext = ListOfNames;
+            this.DataContext = ListOfPeople;
 
         }
 
