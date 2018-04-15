@@ -6,27 +6,37 @@
         xmlns:local="clr-namespace:Lesson12MenuAndCommands"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+    <Window.CommandBindings>
+        <CommandBinding Command="Close" CanExecute="CommandBinding_CanExecute" Executed="CommandBinding_Executed"></CommandBinding>
+    </Window.CommandBindings>
     <DockPanel>
         <Menu DockPanel.Dock="Top">
             <MenuItem Header="_File">
                 <MenuItem Header="_New">
-                    <MenuItem.Icon>
-                        <Image Source="file.png"></Image>
-                    </MenuItem.Icon>
+                   
                     <MenuItem Header="_Project" InputGestureText="Ctrl+N"></MenuItem>
                     <MenuItem Header="_DataBase"></MenuItem>
+                </MenuItem>
+                <MenuItem Header="Open"></MenuItem>
+                <Separator></Separator>
+                <MenuItem Header="Close" Command="Close"></MenuItem>
+                <MenuItem Header="Save" Command="Save">
+                   <!-- <MenuItem.Icon>
+                        <Image Source=""></Image>
+                    </MenuItem.Icon>-->
                 </MenuItem>
             </MenuItem>
             <MenuItem Header="Edit">
                 <MenuItem Header="Copy" Command="Copy"></MenuItem>
                 <MenuItem Header="Cut" Command="Cut"></MenuItem>
                 <MenuItem Header="Paste" Command="Paste"></MenuItem>
+                <MenuItem Header="Increase FontSize" Command="IncreaseFontSize" ></MenuItem>
             </MenuItem>
             <MenuItem Header="Help">
                 <MenuItem Header="About"></MenuItem>
             </MenuItem>
 
         </Menu>
-        <TextBox></TextBox>
+        <RichTextBox></RichTextBox>
     </DockPanel>
 </Window>

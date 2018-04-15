@@ -1,4 +1,5 @@
 ﻿using System.Windows;
+using System.Windows.Documents;
 using System.Windows.Input;
 
 namespace Lesson12MenuAndCommands
@@ -12,7 +13,19 @@ namespace Lesson12MenuAndCommands
         {
             ApplicationCommands.Copy.InputGestures.Clear();
             ApplicationCommands.Copy.InputGestures.Add(new KeyGesture(Key.H, ModifierKeys.Control));
+            EditingCommands.IncreaseFontSize.InputGestures.Add(new KeyGesture(Key.Y, ModifierKeys.Alt));
             InitializeComponent();
+        }
+
+        private void CommandBinding_CanExecute(object sender, CanExecuteRoutedEventArgs e)
+        {
+            e.CanExecute = true;
+
+        }
+
+        private void CommandBinding_Executed(object sender, ExecutedRoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
         }
     }
 }
