@@ -9,6 +9,7 @@
     <Window.CommandBindings>
         <CommandBinding Command="Close" CanExecute="CommandBinding_CanExecute" Executed="CommandBinding_Executed"></CommandBinding>
         <CommandBinding Command="local:CustomCommands.Exit" CanExecute="CommandBinding_CanExecute" Executed="CommandBinding_Executed" ></CommandBinding>
+        <CommandBinding Command="Help" CanExecute="CommandBindingHelp_CanExecute" Executed="CommandBindingHelp_Executed" ></CommandBinding>
 
     </Window.CommandBindings>
     <DockPanel>
@@ -36,7 +37,7 @@
                 <MenuItem Header="Increase FontSize" Command="IncreaseFontSize" ></MenuItem>
             </MenuItem>
             <MenuItem Header="Help">
-                <MenuItem Header="About"></MenuItem>
+                <MenuItem Header="About" Command="Help"></MenuItem>
             </MenuItem>
 
         </Menu>

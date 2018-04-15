@@ -27,5 +27,15 @@ namespace Lesson12MenuAndCommands
         {
             Application.Current.Shutdown();
         }
+
+        private void CommandBindingHelp_CanExecute(object sender, CanExecuteRoutedEventArgs e)
+        {
+            e.CanExecute = true;
+        }
+
+        private void CommandBindingHelp_Executed(object sender, ExecutedRoutedEventArgs e)
+        {
+            new About().ShowDialog();
+        }
     }
 }
