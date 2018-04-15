@@ -18,8 +18,8 @@
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel>
-                        <TextBlock FontSize="25" Text="{Binding Path=Name}"></TextBlock>
-                        <TextBlock FontSize="12" Text="{Binding Path=Position}"></TextBlock>
+                        <TextBlock x:Name="PersonNameText"  Text="{Binding Path=Name}"></TextBlock>
+                        <TextBlock x:Name="PersonPositionText" FontSize="12" Text="{Binding Path=Position}"></TextBlock>
                     </StackPanel>
                 </DataTemplate>
             </ListBox.ItemTemplate>
@@ -27,6 +27,7 @@
             <ListBox.ItemContainerStyle>
                 <Style TargetType="ListBoxItem">
                     <Setter Property="Padding" Value="5"></Setter>
+                    <Setter Property="FontSize" Value="18"></Setter>
                     <Style.Triggers>
                         <Trigger Property="IsSelected" Value="True">
                             <Setter Property="FontSize" Value="25"></Setter>
