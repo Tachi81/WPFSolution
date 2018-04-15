@@ -24,12 +24,14 @@ namespace Lesson11ListBoxAndObservableCollection
             new Person() {Name= "Olga", Position = "Office Manager"}
 
         };
+        ObservableCollection<Status> ListOfStatusses = new ObservableCollection<Status>();
 
         public MainWindow()
         {
             InitializeComponent();
 
             this.DataContext = ListOfPeople;
+            StatusListSection.DataContext = ListOfStatusses;
 
         }
 
@@ -37,7 +39,7 @@ namespace Lesson11ListBoxAndObservableCollection
         {
             if (!String.IsNullOrWhiteSpace(NameText.Text))
             {
-                ListOfPeople.Add(new Person(){Name = NameText.Text});
+                ListOfPeople.Add(new Person() { Name = NameText.Text });
             }
 
         }
@@ -49,6 +51,23 @@ namespace Lesson11ListBoxAndObservableCollection
                 ListOfPeople.RemoveAt(NamesList.SelectedIndex);
             }
 
+        }
+
+        private void AddStatusBtn(object sender, RoutedEventArgs e)
+        {
+            int statusWeight = Int32.Parse(StatusWeightText.Text);
+            if (statusWeight < 0)
+            {
+                statusWeight = 0;
+            }
+
+            if (statusWeight > 100)
+            {
+                statusWeight = 100;
+            }
+
+            string isActive = (bool)IsActiveChkBox.IsChecked ? "On" : "Off";
+            ListOfStatusses.Add(new Status() { StatusName = StatusNameText.Text, IsActive = isActive, Weight = statusWeight });
         }
     }
 }

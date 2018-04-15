@@ -38,5 +38,45 @@
             </ListBox.ItemContainerStyle>
         </ListBox>
         <Button Click="RemoveBtnClick" Content="Usuń" Margin="10"></Button>
+
+        <StackPanel x:Name="StatusListSection" Orientation="Horizontal">
+            <StackPanel>
+                <TextBlock>Status</TextBlock>
+                <TextBox x:Name="StatusNameText" Width="300"></TextBox>
+                <TextBlock>IsActive</TextBlock>
+                <CheckBox x:Name="IsActiveChkBox"></CheckBox>
+                <TextBlock>Status Weight</TextBlock>
+                <TextBox x:Name="StatusWeightText" Width="300"></TextBox>
+                <Button Content="Add" Click="AddStatusBtn"></Button>
+            </StackPanel>
+            <ComboBox Width="300" Height="30"  ItemsSource="{Binding}">
+
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel x:Name="StatusItem" Orientation="Horizontal" Width="300">
+                            <StackPanel Width="200">
+                                <TextBlock HorizontalAlignment="Left" Text="{Binding Path=StatusName}"></TextBlock>
+                                <TextBlock HorizontalAlignment="Left" Text="{Binding Path=IsActive}"></TextBlock>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" Width="100">
+                                <TextBlock HorizontalAlignment="Right" FontSize="12" Text="W: "></TextBlock>
+                                <TextBlock FontSize="12" Text="{Binding Path=Weight}"></TextBlock>
+                            </StackPanel>
+                        </StackPanel>
+                        <DataTemplate.Triggers>
+                            <DataTrigger Binding="{Binding Path=IsActive}" Value="On">
+                                <Setter TargetName="StatusItem" Property="Background" Value="Aquamarine"></Setter>
+                            </DataTrigger>
+                            <DataTrigger Binding="{Binding Path=IsActive}" Value="Off">
+                                <Setter TargetName="StatusItem" Property="Background" Value="Crimson"></Setter>
+                            </DataTrigger>
+                        </DataTemplate.Triggers>
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+                
+
+            </ComboBox>
+        </StackPanel>
+
     </StackPanel>
 </Window>
