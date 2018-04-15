@@ -27,6 +27,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson11ListBoxAndObservabl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson12MenuAndCommands", "Lesson12MenuAndCommands\Lesson12MenuAndCommands.csproj", "{3AF2AC0A-D909-45C0-974E-80E0D53B5F69}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleDownloader", "ConsoleDownloader\ConsoleDownloader.csproj", "{5793F02E-1851-49F2-ADB7-816643A8D9E6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfDownloader", "WpfDownloader\WpfDownloader.csproj", "{57E78FA1-961B-48C6-84F1-2457DA19C530}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -81,6 +85,14 @@ Global
 		{3AF2AC0A-D909-45C0-974E-80E0D53B5F69}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3AF2AC0A-D909-45C0-974E-80E0D53B5F69}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3AF2AC0A-D909-45C0-974E-80E0D53B5F69}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5793F02E-1851-49F2-ADB7-816643A8D9E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5793F02E-1851-49F2-ADB7-816643A8D9E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5793F02E-1851-49F2-ADB7-816643A8D9E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5793F02E-1851-49F2-ADB7-816643A8D9E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57E78FA1-961B-48C6-84F1-2457DA19C530}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57E78FA1-961B-48C6-84F1-2457DA19C530}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57E78FA1-961B-48C6-84F1-2457DA19C530}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57E78FA1-961B-48C6-84F1-2457DA19C530}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
