@@ -37,7 +37,7 @@ namespace Lesson11ListBoxAndObservableCollection
         {
             if (!String.IsNullOrWhiteSpace(NameText.Text))
             {
-                ListOfNames.Add(NameText.Text);
+                ListOfPeople.Add(new Person(){Name = NameText.Text});
             }
 
         }
@@ -46,7 +46,7 @@ namespace Lesson11ListBoxAndObservableCollection
         {
             if (NamesList.SelectedIndex >= 0)
             {
-                ListOfNames.RemoveAt(NamesList.SelectedIndex);
+                ListOfPeople.RemoveAt(NamesList.SelectedIndex);
             }
 
         }
